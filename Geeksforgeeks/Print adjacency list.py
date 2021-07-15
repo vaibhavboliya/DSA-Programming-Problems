@@ -1,3 +1,4 @@
+# URL: https://practice.geeksforgeeks.org/problems/print-adjacency-list-1587115620/0
 # Given the adjacency list of a bidirectional graph. Your task is to return the adjacency list for each vertex.
 # Example 1:
 
