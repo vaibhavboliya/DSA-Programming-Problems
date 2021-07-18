@@ -38,32 +38,21 @@
 
 class Solution:
     def sort012(self,arr,n):
-        count0 = 0
-        count1 = 0
-        count2 = 0
-        for x in arr:
-            if x==0:
-                count0+=1
-            elif x==1:
-                count1+=1
+        low=0
+        high=n-1
+        mid=0
+        while mid<=high:
+            if arr[mid]==0:
+                arr[mid] , arr[low] = arr[low] , arr[mid]
+                mid+=1
+                low+=1
+            
+            elif arr[mid]==1:
+                mid+=1
+            
             else:
-                count2+=1
-        i=0
-        while count0 or count1 or count2 and i<n:
-            if count0:
-                arr[i]=0
-                i+=1
-                count0-=1
-                continue
-            elif count1:
-                arr[i]=1
-                i+=1
-                count1-=1
-                continue
-            else:
-                arr[i]=2
-                i+=1
-                count2-=1
+                arr[mid] , arr[high] = arr[high] , arr[mid]
+                high-=1
         # code here
 
 
