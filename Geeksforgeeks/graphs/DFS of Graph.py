@@ -28,18 +28,16 @@
 
 
 class Solution:
+    def dfs(self,v, lis):
+        lis.append(v)
+        for i in adj[v]:
+            if i not in lis:
+                self.dfs(i, lis)
 
     # Function to return a list containing the DFS traversal of the graph.
     def dfsOfGraph(self, V, adj):
         lis = []
-
-        def dfs(v, lis):
-            lis.append(v)
-            for i in adj[v]:
-                if i not in lis:
-                    dfs(i, lis)
-        lis = []
-        dfs(0, lis)
+        self.dfs(0, lis)
         return lis
 
 
