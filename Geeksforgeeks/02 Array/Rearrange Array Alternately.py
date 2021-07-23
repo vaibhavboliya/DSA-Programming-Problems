@@ -33,6 +33,7 @@
 class Solution:
     ##Complete this function
     #Function to rearrange  the array elements alternately.
+
     def rearrange(self,arr, n): 
         maxval = arr[-1]+1
         mincount = 0
@@ -45,15 +46,7 @@ class Solution:
                 arr[i]=arr[i]+(arr[mincount]%maxval)*maxval
                 mincount +=1
         for i,n in enumerate(arr):
-            arr[i] = n//maxval
-            
-
-        
-               
-                
-            
-            
-            
+            arr[i] = n//maxval     
             
         ##Your code here
 
@@ -62,10 +55,6 @@ class Solution:
 #Initial Template for Python 3
 
 import math
-
-
-
-
 def main():
         T=int(input())
         while(T>0):
